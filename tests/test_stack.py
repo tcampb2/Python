@@ -2,63 +2,91 @@ __author__ = "Claire DeMars"
 
 import unittest
 import random
+from parameterized import parameterized
+import sys
+import os
+
+sys.path.append(os.path.abspath('../data_structures/Stacks'))
 from stack import Stack
 
 
+# run with these params: increasing order, random ordered, >100 items
 class TestStack(unittest.TestCase):
 		
-	def setUp( self, test_data=range(9) ):
-		# called for every function that starts with test_
-		self._test_data = test_data
-		self._stack = Stack(len(self._test_data))
-		for i in self._test_data:
-			self._stack.push(i)
-			
-	def helper_check_stack_still_works(self, number_popped):
-		num_left = len(self._test_data) - number_popped
-		for i in range(num_left):
-			look_here = -(i+number_popped+1)
-			assert( self._stack.peek() == self._test_data[ look_here ] )
-			assert( not self._stack.is_empty() )
-			self._stack.pop()
-		assert(self._stack.is_empty())
-        
-	def test_pop_one(self):
-		self._stack.pop()
-		self.helper_check_stack_still_works(1)
-	
-	def test_pop_some(self):
-		num_to_pop = round( random.random()) *len( self._test_data)
-		for i in range(num_to_pop):
-			self._stack.pop()
-		self.helper_check_stack_still_works(num_to_pop)
-	
-	def test_pop_all(self):
-		num_to_pop = len( self._test_data)
-		for i in range(num_to_pop):
-			self._stack.pop()
-		assert(self._stack.is_empty())
-	
-	def test_peek(self):
-		num_left = len(self._test_data)
-		for i in range(num_left):
-			look_here = -(i+1)
-			assert( self._stack.peek() == self._test_data[ look_here ] )
-			self._stack.pop()
-				
-	def test_is_empty(self):
-		len_test_data = len(self._test_data)
-		for i in range( len_test_data ):
-			assert(self._stack.is_empty() == False )
-			self._stack.pop()
-		assert(self._stack.is_empty() == True)
-		
-	def test_size(self):
-		len_test_data = len(self._test_data)
-		for i in range( len_test_data ):
-			self._stack.pop()
-			assert( self._stack.size() == len_test_data - i -1 )
-		
 
+	def setUp(self):
+		random.seed()
+		
+	def helper_fill_stack( self, test_data):
+		self._stack = Stack(len(test_data))
+		for i in test_data:
+			self._stack.push(i)
+						
+
+	@parameterized.expand([
+		([i for i in range(15)], ),
+		([i for i in reversed(range(20))], ),
+		( [random.random() for i in range(100) ], )
+	])		
+	def test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder(self, test_data):
+		self.helper_fill_stack(test_data)
+		for i in reversed(test_data):
+			self.assertEqual( i, self._stack.pop() )
+	
+	
+	@parameterized.expand([
+		([i for i in range(15)], ),
+	])		
+	def test__is_empty_and_pop(self, test_data):
+		self.helper_fill_stack(test_data)
+		for i in range(len(test_data) ):
+			self.assertFalse( self._stack.is_empty() )
+			self._stack.pop()
+		self.assertTrue( self._stack.is_empty() )
+			
+	@parameterized.expand([
+		([i for i in range(15)], ),
+		([i for i in reversed(range(20))], ),
+		( [random.random() for i in range(100) ], )
+	])				
+	def test__peek__TopElement__IsDisplayed(self, test_data):
+		self.helper_fill_stack(test_data)
+		self.assertEqual( self._stack.peek(), test_data[-1])
+		
+	@parameterized.expand([
+		([i for i in range(15)], ),
+		([i for i in reversed(range(20))], ),
+		( [random.random() for i in range(100) ], )
+	])			
+	def test__peek_and_pop(self, test_data):
+		self.helper_fill_stack(test_data)
+		for i in reversed(test_data ) :
+			self.assertEqual( i, self._stack.peek() )
+			self._stack.pop()	
+	
+	@parameterized.expand([
+		([i for i in range(15)], ),
+		([i for i in reversed(range(20))], ),
+		( [random.random() for i in range(100) ], )
+	])			
+	def test__size__FullStack__SizeIsCorrect(self, test_data):
+		self.helper_fill_stack(test_data)
+		self.assertEqual (self._stack.size(), len(test_data) )
+		
+	@parameterized.expand([
+		([i for i in range(15)], ),
+		([i for i in reversed(range(20))], ),
+		( [random.random() for i in range(100) ], )
+	])			
+	def test__size_and_pop(self, test_data):
+		self.helper_fill_stack(test_data)
+		counter = self._stack.size()
+		for i in range(counter):
+			self.assertEqual (self._stack.size(), counter)
+			self._stack.pop()
+			counter -= 1
+			
+			
+	
 if __name__ == "__main__":
 	unittest.main()

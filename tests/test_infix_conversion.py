@@ -9,7 +9,7 @@ import stack
 
 class TestInfixConversion(unittest.TestCase):
 		
-	def test__infix_to_postfix__MismatchedRightParenInInfixExpression__RaisesValueError(self, mock_stack):
+	def test__infix_to_postfix__MismatchedRightParenInInfixExpression__RaisesValueError(self):
 		expression = "((2+3)*3+4-(2+2)))"
 		with self.assertRaises(ValueError):
 			infix_to_postfix(expression)

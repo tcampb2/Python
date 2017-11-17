@@ -1,12 +1,12 @@
-import sys
-import os
-sys.path.append(os.path.abspath('../data_structures/LinkedList'))
-
 from parameterized import parameterized
-from DoublyLinkedList import LinkedList
-from DoublyLinkedList import Link
 import unittest.mock as mock
 import unittest
+import sys
+import os
+
+sys.path.append(os.path.abspath('../data_structures/LinkedList'))
+from DoublyLinkedList import LinkedList
+from DoublyLinkedList import Link
         
 class DoubleTestCase(unittest.TestCase):
     

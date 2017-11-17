@@ -1,12 +1,12 @@
-import sys
-import os
-sys.path.append(os.path.abspath('../data_structures/LinkedList'))
-
 from parameterized import parameterized
-from singly_LinkedList import Linked_List
-from singly_LinkedList import Node
 import unittest.mock as mock
 import unittest
+import sys
+import os
+
+sys.path.append(os.path.abspath('../data_structures/LinkedList'))
+from singly_LinkedList import Linked_List
+from singly_LinkedList import Node
 
 class SingleTestCase(unittest.TestCase):
 
@@ -20,22 +20,22 @@ class SingleTestCase(unittest.TestCase):
     @unittest.expectedFailure    
     def test_insert_head_and_remove_head_single_object(self):
     	self._list.insert_head("hello")
-    	self.assertEqual(self._list.delete_head().value, "hello")
+    	self.assertEqual(self._list.delete_head().data, "hello")
     
     @unittest.expectedFailure	
     def test_insert_tail_and_remove_tail_single_object(self):
     	self._list.insert_tail("hello")
-    	self.assertEqual(self._list.delete_tail().value, "hello")
+    	self.assertEqual(self._list.delete_tail().data, "hello")
     
     @unittest.expectedFailure    
     def test_insert_tail_and_remove_head_single_object(self):
     	self._list.insert_tail("hello")
-    	self.assertEqual(self._list.delete_head().value, "hello")
+    	self.assertEqual(self._list.delete_head().data, "hello")
     
     @unittest.expectedFailure	
     def test_insert_head_and_remove_tail_single_object(self):
     	self._list.insert_head("hello")
-    	self.assertEqual(self._list.delete_tail().value, "hello")
+    	self.assertEqual(self._list.delete_tail().data, "hello")
     	
     def test_insert_head_two_objects(self):
     	self._list.insert_head("hello")

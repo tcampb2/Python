@@ -141,11 +141,13 @@ class AVL:
         node.parent.right = node.right
 
     def double_rotate_left(self, node):
-        self.rotate_right(node.getRight().getRight())
+        # self.rotate_right(node.getRight().getRight())
+        self.rotate_right(node.right().right())
         self.rotate_left(node)
 
     def double_rotate_right(self, node):
-        self.rotate_left(node.getLeft().getLeft())
+        # self.rotate_left(node.getLeft().getLeft())
+        self.rotate_left(node.left().left())
         self.rotate_right(node)
 
     def empty(self):
@@ -168,13 +170,14 @@ class AVL:
     def getRoot(self):
         return self.root
 
-t = AVL()
-t.insert(1)
-t.insert(2)
-t.insert(3)
-# t.preShow(t.root)
-# print("\n")
-# t.insert(4)
-# t.insert(5)
-# t.preShow(t.root)
-# t.preorden(t.root)
+if __name__ == "__main__":
+	t = AVL()
+	t.insert(1)
+	t.insert(2)
+	t.insert(3)
+	# t.preShow(t.root)
+	# print("\n")
+	# t.insert(4)
+	# t.insert(5)
+	# t.preShow(t.root)
+	# t.preorden(t.root)

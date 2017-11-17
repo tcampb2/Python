@@ -26,12 +26,12 @@ class TestStack(unittest.TestCase):
 	@parameterized.expand([
 		([i for i in range(15)], ),
 		([i for i in reversed(range(20))], ),
-		( [random.random() for i in range(100) ], )
+		( [random.random() for i in range(100) ], ),
 	])		
 	def test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder(self, test_data):
 		self.helper_fill_stack(test_data)
 		for i in reversed(test_data):
-			self.assertEqual( i, self._stack.pop() )
+			self.assertEqual( 2, self._stack.pop() )
 	
 	
 	@parameterized.expand([

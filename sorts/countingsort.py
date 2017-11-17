@@ -35,7 +35,8 @@ def countSort(arr):
         ans[i] = output[i]
     return ans 
  
-# Driver program to test above function
-arr = "thisisthestring"
-ans = countSort(arr)
-print ("Sorted string array is %s"  %("".join(ans)))
+if __name__ == "__main__":
+	# Driver program to test above function
+	arr = "thisisthestring"
+	ans = countSort(arr)
+	print ("Sorted string array is %s"  %("".join(ans)))

@@ -39,13 +39,13 @@ def cycle_sort(array):
 
     return ans
 
+if __name__ == "__main__":	
+	#  Main Code starts here
+	user_input = input('Enter numbers separated by a comma:\n')
+	unsorted = [int(item) for item in user_input.split(',')]
+	n = len(unsorted)
+	cycle_sort(unsorted)
 
-#  Main Code starts here
-user_input = input('Enter numbers separated by a comma:\n')
-unsorted = [int(item) for item in user_input.split(',')]
-n = len(unsorted)
-cycle_sort(unsorted)
-
-print("After sort : ")
-for i in range(0, n):
-    print(unsorted[i], end=' ')
+	print("After sort : ")
+	for i in range(0, n):
+		print(unsorted[i], end=' ')

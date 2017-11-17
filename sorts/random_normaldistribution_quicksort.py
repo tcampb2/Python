@@ -40,27 +40,28 @@ def _inPlacePartition(A,start,end):
     A[end]=temp
     return newPivotIndex+1,count
     
-outfile = TemporaryFile()    
-p = 100 # 1000 elements are to be sorted
+if __name__ == "__main__":
+	outfile = TemporaryFile()    
+	p = 100 # 1000 elements are to be sorted
 
 
 
 
-mu, sigma = 0, 1 # mean and standard deviation
-X = np.random.normal(mu, sigma, p)
-np.save(outfile, X)
-print('The array is')
-print(X)
+	mu, sigma = 0, 1 # mean and standard deviation
+	X = np.random.normal(mu, sigma, p)
+	np.save(outfile, X)
+	print('The array is')
+	print(X)
 
-  
-    
+	  
+		
 
 
 
-outfile.seek(0)  # using the same array
-M = np.load(outfile)
-r = (len(M)-1)
-z = _inPlaceQuickSort(M,0,r) 
+	outfile.seek(0)  # using the same array
+	M = np.load(outfile)
+	r = (len(M)-1)
+	z = _inPlaceQuickSort(M,0,r) 
 
-print("No of Comparisons for 100 elements selected from a standard normal distribution is :")
-print(z)
+	print("No of Comparisons for 100 elements selected from a standard normal distribution is :")
+	print(z)

@@ -5,7 +5,6 @@ import os
 sys.path.append(os.path.abspath('../data_structures/Stacks'))
 from infix_to_postfix_conversion import infix_to_postfix
 import stack
-#MethodName_StateUnderTest_ExpectedBehavior
 
 class TestInfixConversion(unittest.TestCase):
 		
@@ -14,7 +13,7 @@ class TestInfixConversion(unittest.TestCase):
 		with self.assertRaises(ValueError):
 			infix_to_postfix(expression)
 	
-	@unittest.skip("code technically doesn't promise to raise ValueError for mismatched left parens, although it does raise it for mismatched right paren")
+	@unittest.skip("code inconsistency but not necessarily a bug: code raises error for mismatched right paren, but not for a left one")
 	def test__infix_to_postfix__MismatchedLeftParenInInfixExpression__RaisesValueError(self):
 		expression = "((2+3)*3+4-(2+2)"
 		with self.assertRaises(ValueError):

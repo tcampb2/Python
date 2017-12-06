@@ -1,7 +1,0 @@
-
-# used in code
-numpy
-
-# used in tests folder
-timeout_decorator
-parameterized

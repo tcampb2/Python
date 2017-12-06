@@ -2,6 +2,16 @@
 
 ### All algorithms implemented in Python (for education)
 
+Dependencies: 
+	Used for code:
+		Python 3.5
+		numpy
+	Used for tests:
+		timeout_decorator 	
+		parameterized
+
+
+Descriptions
 These are for demonstration purposes only. There are many implementations of sorts in the Python standard library that are much better for performance reasons.
 
 ## Sort Algorithms

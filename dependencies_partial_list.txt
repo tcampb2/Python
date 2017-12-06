@@ -3,4 +3,5 @@
 numpy
 
 # used in tests folder
-test_decorator
+timeout_decorator
+parameterized

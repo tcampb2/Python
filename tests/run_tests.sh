@@ -1,14 +1,12 @@
 #!/bin/bash
-#echo "python3 capture_output_unittest.py -v"
-#python3 capture_output_unittest.py -v
 
-((var++))
+var=0
 for filename in *.py; do
-	if [[ $filename != __* ]]; then
-		echo "\n"
+	if [ "$filename" != "__init__.py" ]; then
+		echo 
 		echo "Test $var: $filename"
-		echo "\n"
+		echo 
 		python3 $filename -v
-		((var++))
+		var=$(expr $var + 1)
 	fi
 done

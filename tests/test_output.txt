@@ -1,0 +1,599 @@
+
+Test 0: capture_output.py
+
+
+Test 1: capture_output_unittest.py
+
+test_with_no_words (__main__.TestCaptureOutput) ... ok
+test_with_single_word (__main__.TestCaptureOutput) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+Test 2: test_avl.py
+
+test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder_0 (__main__.TestAvl) ... ERROR
+test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder_1 (__main__.TestAvl) ... ERROR
+test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder_2 (__main__.TestAvl) ... ERROR
+
+======================================================================
+ERROR: test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder_0 (__main__.TestAvl)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_avl.py", line 30, in test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder
+    self.assertEqual(out.getValue().strip(),  expected_result)
+AttributeError: '_io.StringIO' object has no attribute 'getValue'
+
+======================================================================
+ERROR: test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder_1 (__main__.TestAvl)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_avl.py", line 30, in test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder
+    self.assertEqual(out.getValue().strip(),  expected_result)
+AttributeError: '_io.StringIO' object has no attribute 'getValue'
+
+======================================================================
+ERROR: test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder_2 (__main__.TestAvl)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_avl.py", line 23, in test__insert_and_preShow__AvlTree__ThingsGetInsertedCorrectlyAndComeOutInSortedOrder
+    tree.insert(i)
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/AVL/AVL.py", line 82, in insert
+    self.rebalance(node)
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/AVL/AVL.py", line 121, in rebalance
+    self.double_rotate_left(n)
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/AVL/AVL.py", line 145, in double_rotate_left
+    self.rotate_right(node.right().right())
+TypeError: 'Node' object is not callable
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (errors=3)
+
+Test 3: test_chaos_machine.py
+
+test (__main__.TestChaosMachine) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+OK
+
+Test 4: test_decision_tree.py
+
+test_mean_squared_error_0_test_1 (__main__.DecisionTreeTestCase) ... ok
+test_mean_squared_error_1_test_2 (__main__.DecisionTreeTestCase) ... ok
+test_mean_squared_error_2_test_3 (__main__.DecisionTreeTestCase) ... ok
+test_mean_squared_error_3_test_4 (__main__.DecisionTreeTestCase) ... ok
+test_mean_squared_error_4_test_5 (__main__.DecisionTreeTestCase) ... ok
+test_predict_0_test_1 (__main__.DecisionTreeTestCase) ... ok
+test_predict_1_test_2 (__main__.DecisionTreeTestCase) ... ok
+test_predict_2_test_3 (__main__.DecisionTreeTestCase) ... ok
+test_predict_3_test_4 (__main__.DecisionTreeTestCase) ... ok
+test_predict_4_test_5 (__main__.DecisionTreeTestCase) ... ok
+test_predict_failure (__main__.DecisionTreeTestCase) ... ok
+test_train_0_test_1 (__main__.DecisionTreeTestCase) ... ok
+test_train_1_test_2 (__main__.DecisionTreeTestCase) ... ok
+test_train_2_test_3 (__main__.DecisionTreeTestCase) ... ok
+test_train_3_test_4 (__main__.DecisionTreeTestCase) ... ok
+test_train_4_test_5 (__main__.DecisionTreeTestCase) ... ok
+test_train_failure_0_test_1 (__main__.DecisionTreeTestCase) ... ok
+test_train_failure_1_test_2 (__main__.DecisionTreeTestCase) ... ok
+test_train_failure_2_test_3 (__main__.DecisionTreeTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.002s
+
+OK
+
+Test 5: test_double.py
+
+test_delete_0_test_delete1 (__main__.DoubleTestCase) ... ok
+test_delete_1_test_delete2 (__main__.DoubleTestCase) ... ok
+test_delete_2_test_delete3 (__main__.DoubleTestCase) ... ok
+test_display_0_test_string1 (__main__.DoubleTestCase) ... ok
+test_display_1_test_string2 (__main__.DoubleTestCase) ... ok
+test_display_2_test_string3 (__main__.DoubleTestCase) ... ok
+test_empty (__main__.DoubleTestCase) ... ok
+test_insert_head_and_remove_head_single_object (__main__.DoubleTestCase) ... ERROR
+test_insert_head_and_remove_head_two_objects (__main__.DoubleTestCase) ... ok
+test_insert_head_and_remove_tail_single_object (__main__.DoubleTestCase) ... ERROR
+test_insert_head_and_remove_tail_two_objects (__main__.DoubleTestCase) ... ok
+test_insert_head_then_insert_tail (__main__.DoubleTestCase) ... ok
+test_insert_head_two_objects (__main__.DoubleTestCase) ... ok
+test_insert_tail_and_remove_head_single_object (__main__.DoubleTestCase) ... ERROR
+test_insert_tail_and_remove_head_two_objects (__main__.DoubleTestCase) ... ERROR
+test_insert_tail_and_remove_tail_single_object (__main__.DoubleTestCase) ... ERROR
+test_insert_tail_and_remove_tail_two_objects (__main__.DoubleTestCase) ... ERROR
+test_insert_tail_then_insert_head (__main__.DoubleTestCase) ... ERROR
+test_insert_tail_two_objects (__main__.DoubleTestCase) ... ERROR
+
+======================================================================
+ERROR: test_insert_head_and_remove_head_single_object (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 21, in test_insert_head_and_remove_head_single_object
+    self.assertEqual(self._list.deleteHead().value, "hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 23, in deleteHead
+    self.head.previous = None # oldHead --> 2ndElement(head) nothing pointing at it so the old head will be removed
+AttributeError: 'NoneType' object has no attribute 'previous'
+
+======================================================================
+ERROR: test_insert_head_and_remove_tail_single_object (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 33, in test_insert_head_and_remove_tail_single_object
+    self.assertEqual(self._list.deleteTail().value, "hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 38, in deleteTail
+    self.tail.next = None # 2ndlast(tail) --> None
+AttributeError: 'NoneType' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_and_remove_head_single_object (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 28, in test_insert_tail_and_remove_head_single_object
+    self._list.insertTail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 31, in insertTail
+    self.tail.next = newLink # currentTail(tail) --> newLink -->
+AttributeError: 'NoneType' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_and_remove_head_two_objects (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 61, in test_insert_tail_and_remove_head_two_objects
+    self._list.insertTail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 31, in insertTail
+    self.tail.next = newLink # currentTail(tail) --> newLink -->
+AttributeError: 'NoneType' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_and_remove_tail_single_object (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 24, in test_insert_tail_and_remove_tail_single_object
+    self._list.insertTail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 31, in insertTail
+    self.tail.next = newLink # currentTail(tail) --> newLink -->
+AttributeError: 'NoneType' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_and_remove_tail_two_objects (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 56, in test_insert_tail_and_remove_tail_two_objects
+    self._list.insertTail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 31, in insertTail
+    self.tail.next = newLink # currentTail(tail) --> newLink -->
+AttributeError: 'NoneType' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_then_insert_head (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 51, in test_insert_tail_then_insert_head
+    self._list.insertTail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 31, in insertTail
+    self.tail.next = newLink # currentTail(tail) --> newLink -->
+AttributeError: 'NoneType' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_two_objects (__main__.DoubleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_double.py", line 36, in test_insert_tail_two_objects
+    self._list.insertTail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/DoublyLinkedList.py", line 31, in insertTail
+    self.tail.next = newLink # currentTail(tail) --> newLink -->
+AttributeError: 'NoneType' object has no attribute 'next'
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.004s
+
+FAILED (errors=8)
+
+Test 6: test_frequency_finder.py
+
+test_0_commonValues (__main__.TestFrequencyFinder) ... ok
+test_1_upperCase (__main__.TestFrequencyFinder) ... ok
+test_2_valuesNeitherCommonNorUncommon (__main__.TestFrequencyFinder) ... ok
+test_3_valuesNeitherCommonNorUncommon (__main__.TestFrequencyFinder) ... ok
+test_4_uncommonValues (__main__.TestFrequencyFinder) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+
+Test 7: test_infix_conversion.py
+
+test__infix_to_postfix__ComplicatedExpression__ConvertsToPostfixCorrectly (__main__.TestInfixConversion) ... ok
+test__infix_to_postfix__ExpressionWhereLeftToRightOrderIsDifferentFromOrderOfOperations__GetsOrderCorrect (__main__.TestInfixConversion) ... ok
+test__infix_to_postfix__MismatchedLeftParenInInfixExpression__RaisesValueError (__main__.TestInfixConversion) ... skipped 'code inconsistency but not necessarily a bug: code raises error for mismatched right paren, but not for a left one'
+test__infix_to_postfix__MismatchedRightParenInInfixExpression__RaisesValueError (__main__.TestInfixConversion) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK (skipped=1)
+
+Test 8: test_k_means_clustering.py
+
+test_assign_clusters_0_test_1 (__main__.KMeansTestCase) ... ok
+test_assign_clusters_1_test_2 (__main__.KMeansTestCase) ... ok
+test_assign_clusters_2_test_3 (__main__.KMeansTestCase) ... ok
+test_assign_clusters_3_test_4 (__main__.KMeansTestCase) ... ok
+test_assign_clusters_4_test_5 (__main__.KMeansTestCase) ... ok
+test_centroid_pairwise_dist_0_test_1 (__main__.KMeansTestCase) ... ok
+test_centroid_pairwise_dist_1_test_2 (__main__.KMeansTestCase) ... ok
+test_centroid_pairwise_dist_2_test_3 (__main__.KMeansTestCase) ... ok
+test_centroid_pairwise_dist_3_test_4 (__main__.KMeansTestCase) ... ok
+test_centroid_pairwise_dist_4_test_5 (__main__.KMeansTestCase) ... ok
+test_get_initial_centroids_0_test_1 (__main__.KMeansTestCase) ... ok
+test_get_initial_centroids_1_test_2 (__main__.KMeansTestCase) ... ok
+test_get_initial_centroids_2_test_3 (__main__.KMeansTestCase) ... ok
+test_get_initial_centroids_3_test_4 (__main__.KMeansTestCase) ... ok
+test_get_initial_centroids_4_test_5 (__main__.KMeansTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.015s
+
+OK
+
+Test 9: test_perceptron.py
+
+test_sign (__main__.PerceptronTestCase) ... ok
+test_sort (__main__.PerceptronTestCase) ... ok
+test_trannig (__main__.PerceptronTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.048s
+
+OK
+
+Test 10: test_scoring_functions.py
+
+test_mae_0_test_1 (__main__.ScoringTestCase) ... ok
+test_mae_1_test_2 (__main__.ScoringTestCase) ... ok
+test_mae_2_test_3 (__main__.ScoringTestCase) ... ok
+test_mae_3_test_4 (__main__.ScoringTestCase) ... ok
+test_mae_4_test_5 (__main__.ScoringTestCase) ... ok
+test_mse_0_test_1 (__main__.ScoringTestCase) ... ok
+test_mse_1_test_2 (__main__.ScoringTestCase) ... ok
+test_mse_2_test_3 (__main__.ScoringTestCase) ... ok
+test_mse_3_test_4 (__main__.ScoringTestCase) ... ok
+test_mse_4_test_5 (__main__.ScoringTestCase) ... ok
+test_rmse_0_test_1 (__main__.ScoringTestCase) ... ok
+test_rmse_1_test_2 (__main__.ScoringTestCase) ... ok
+test_rmse_2_test_3 (__main__.ScoringTestCase) ... ok
+test_rmse_3_test_4 (__main__.ScoringTestCase) ... ok
+test_rmse_4_test_5 (__main__.ScoringTestCase) ... ok
+test_rmsle_0_test_1 (__main__.ScoringTestCase) ... ok
+test_rmsle_1_test_2 (__main__.ScoringTestCase) ... ok
+test_rmsle_2_test_3 (__main__.ScoringTestCase) ... ok
+test_rmsle_3_test_4 (__main__.ScoringTestCase) ... ok
+test_rmsle_4_test_5 (__main__.ScoringTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.002s
+
+OK
+
+Test 11: test_single.py
+
+test_display_0_test_string1 (__main__.SingleTestCase) ... ERROR
+test_display_1_test_string2 (__main__.SingleTestCase) ... ERROR
+test_display_2_test_string3 (__main__.SingleTestCase) ... ERROR
+test_empty (__main__.SingleTestCase) ... FAIL
+test_insert_head_and_remove_head_single_object (__main__.SingleTestCase) ... ERROR
+test_insert_head_and_remove_tail_single_object (__main__.SingleTestCase) ... ERROR
+test_insert_head_two_objects (__main__.SingleTestCase) ... ok
+test_insert_tail_and_remove_head_single_object (__main__.SingleTestCase) ... ERROR
+test_insert_tail_and_remove_tail_single_object (__main__.SingleTestCase) ... ERROR
+test_insert_tail_one_object (__main__.SingleTestCase) ... ok
+test_insert_tail_two_objects (__main__.SingleTestCase) ... ERROR
+
+======================================================================
+ERROR: test_display_0_test_string1 (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 1157, in patched
+    return func(*args, **keywargs)
+  File "test_single.py", line 73, in test_display
+    self.assertEqual(list.printList(), expected)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 917, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 983, in _mock_call
+    ret_val = effect(*args, **kwargs)
+  File "test_single.py", line 57, in side_effect_list
+    tamp = list.Head
+AttributeError: 'Linked_List' object has no attribute 'Head'
+
+======================================================================
+ERROR: test_display_1_test_string2 (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 1157, in patched
+    return func(*args, **keywargs)
+  File "test_single.py", line 73, in test_display
+    self.assertEqual(list.printList(), expected)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 917, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 983, in _mock_call
+    ret_val = effect(*args, **kwargs)
+  File "test_single.py", line 57, in side_effect_list
+    tamp = list.Head
+AttributeError: 'Linked_List' object has no attribute 'Head'
+
+======================================================================
+ERROR: test_display_2_test_string3 (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 1157, in patched
+    return func(*args, **keywargs)
+  File "test_single.py", line 73, in test_display
+    self.assertEqual(list.printList(), expected)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 917, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/mock.py", line 983, in _mock_call
+    ret_val = effect(*args, **kwargs)
+  File "test_single.py", line 57, in side_effect_list
+    tamp = list.Head
+AttributeError: 'Linked_List' object has no attribute 'Head'
+
+======================================================================
+ERROR: test_insert_head_and_remove_head_single_object (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_single.py", line 21, in test_insert_head_and_remove_head_single_object
+    self.assertEqual(self._list.delete_head().data, "hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/singly_LinkedList.py", line 37, in delete_head
+    Head=Head.next
+AttributeError: 'Linked_List' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_head_and_remove_tail_single_object (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_single.py", line 33, in test_insert_head_and_remove_tail_single_object
+    self.assertEqual(self._list.delete_tail().data, "hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/singly_LinkedList.py", line 44, in delete_tail
+    while (tamp.next).next!= None:#find the 2nd last element
+AttributeError: 'Linked_List' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_and_remove_head_single_object (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_single.py", line 28, in test_insert_tail_and_remove_head_single_object
+    self._list.insert_tail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/singly_LinkedList.py", line 10, in insert_tail
+    if(Head.next is None):
+AttributeError: 'Linked_List' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_and_remove_tail_single_object (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_single.py", line 24, in test_insert_tail_and_remove_tail_single_object
+    self._list.insert_tail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/singly_LinkedList.py", line 10, in insert_tail
+    if(Head.next is None):
+AttributeError: 'Linked_List' object has no attribute 'next'
+
+======================================================================
+ERROR: test_insert_tail_two_objects (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_single.py", line 45, in test_insert_tail_two_objects
+    self._list.insert_tail("hello")
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/data_structures/LinkedList/singly_LinkedList.py", line 10, in insert_tail
+    if(Head.next is None):
+AttributeError: 'Linked_List' object has no attribute 'next'
+
+======================================================================
+FAIL: test_empty (__main__.SingleTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_single.py", line 17, in test_empty
+    self.assertTrue(self._list.isEmpty())
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.004s
+
+FAILED (failures=1, errors=8)
+
+Test 12: test_sorts.py
+
+test__countingsort__worksForStringList (__main__.TestSorts) ... ERROR
+test__mostSorts__workForIntLists_0_bubble_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_10_selection_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_11_shell_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_12_timsort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_1_cocktail_shaker_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_2_counting_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_3_cyclesort (__main__.TestSorts) ... FAIL
+test__mostSorts__workForIntLists_4_gnome_sort (__main__.TestSorts) ... FAIL
+test__mostSorts__workForIntLists_5_heap_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_6_insertion_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_7_merge_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_8_quick_sort (__main__.TestSorts) ... ok
+test__mostSorts__workForIntLists_9_radix_sort (__main__.TestSorts) ... FAIL
+test__someSorts__workForFloatLists_0_bubble_sort (__main__.TestSorts) ... ok
+test__someSorts__workForFloatLists_10_shell_sort (__main__.TestSorts) ... ok
+test__someSorts__workForFloatLists_11_timsort (__main__.TestSorts) ... FAIL
+test__someSorts__workForFloatLists_1_cocktail_shaker_sort (__main__.TestSorts) ... ok
+test__someSorts__workForFloatLists_2_cyclesort (__main__.TestSorts) ... FAIL
+test__someSorts__workForFloatLists_3_gnome_sort (__main__.TestSorts) ... FAIL
+test__someSorts__workForFloatLists_4_heap_sort (__main__.TestSorts) ... ok
+test__someSorts__workForFloatLists_5_insertion_sort (__main__.TestSorts) ... ok
+test__someSorts__workForFloatLists_6_merge_sort (__main__.TestSorts) ... ok
+test__someSorts__workForFloatLists_7_quick_sort (__main__.TestSorts) ... ok
+test__someSorts__workForFloatLists_8_radix_sort (__main__.TestSorts) ... FAIL
+test__someSorts__workForFloatLists_9_selection_sort (__main__.TestSorts) ... ok
+
+======================================================================
+ERROR: test__countingsort__worksForStringList (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_sorts.py", line 73, in test__countingsort__worksForStringList
+    self.assertEqual(sorted(string_list), function(string_list) )
+  File "/Users/timothycampbell/Documents/Clemson/CPSC873/Github/Python/sorts/countingsort.py", line 20, in countSort
+    count[ord(i)] += 1
+TypeError: ord() expected a character, but string of length 3 found
+
+======================================================================
+FAIL: test__mostSorts__workForIntLists_3_cyclesort (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_sorts.py", line 44, in test__mostSorts__workForIntLists
+    self.assertEqual(sorted(i), function(i) )
+AssertionError: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12[344 chars], 99] != 100
+
+======================================================================
+FAIL: test__mostSorts__workForIntLists_4_gnome_sort (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_sorts.py", line 44, in test__mostSorts__workForIntLists
+    self.assertEqual(sorted(i), function(i) )
+AssertionError: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12[344 chars], 99] != None
+
+======================================================================
+FAIL: test__mostSorts__workForIntLists_9_radix_sort (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_sorts.py", line 44, in test__mostSorts__workForIntLists
+    self.assertEqual(sorted(i), function(i) )
+AssertionError: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12[344 chars], 99] != None
+
+======================================================================
+FAIL: test__someSorts__workForFloatLists_11_timsort (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_sorts.py", line 66, in test__someSorts__workForFloatLists
+    self.assertEqual(sorted(doubles_random), function(doubles_random) )
+AssertionError: Lists differ: [0.00037715971146923266, 0.009711505005806531,[1983 chars]4885] != [0.009711505005806531, 0.016542139305377734, 0[1630 chars]4885]
+
+First differing element 0:
+0.00037715971146923266
+0.009711505005806531
+
+First list contains 17 additional elements.
+First extra element 83:
+0.874525314711571
+
+Diff is 2369 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test__someSorts__workForFloatLists_2_cyclesort (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_sorts.py", line 66, in test__someSorts__workForFloatLists
+    self.assertEqual(sorted(doubles_random), function(doubles_random) )
+AssertionError: [0.027676320943299082, 0.0397724730088265[1985 chars]8743] != 99
+
+======================================================================
+FAIL: test__someSorts__workForFloatLists_3_gnome_sort (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_sorts.py", line 66, in test__someSorts__workForFloatLists
+    self.assertEqual(sorted(doubles_random), function(doubles_random) )
+AssertionError: [0.0024781686361248223, 0.010885739946085[1990 chars]9785] != None
+
+======================================================================
+FAIL: test__someSorts__workForFloatLists_8_radix_sort (__main__.TestSorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_sorts.py", line 66, in test__someSorts__workForFloatLists
+    self.assertEqual(sorted(doubles_random), function(doubles_random) )
+AssertionError: [0.015948425488753082, 0.0188540605004285[1976 chars]0632] != None
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.037s
+
+FAILED (failures=7, errors=1)
+
+Test 13: test_stack.py
+
+test__is_empty_and_pop_0 (__main__.TestStack) ... ok
+test__peek__TopElement__IsDisplayed_0 (__main__.TestStack) ... ok
+test__peek__TopElement__IsDisplayed_1 (__main__.TestStack) ... ok
+test__peek__TopElement__IsDisplayed_2 (__main__.TestStack) ... ok
+test__peek_and_pop_0 (__main__.TestStack) ... ok
+test__peek_and_pop_1 (__main__.TestStack) ... ok
+test__peek_and_pop_2 (__main__.TestStack) ... ok
+test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder_0 (__main__.TestStack) ... FAIL
+test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder_1 (__main__.TestStack) ... FAIL
+test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder_2 (__main__.TestStack) ... FAIL
+test__size__FullStack__SizeIsCorrect_0 (__main__.TestStack) ... ok
+test__size__FullStack__SizeIsCorrect_1 (__main__.TestStack) ... ok
+test__size__FullStack__SizeIsCorrect_2 (__main__.TestStack) ... ok
+test__size_and_pop_0 (__main__.TestStack) ... ok
+test__size_and_pop_1 (__main__.TestStack) ... ok
+test__size_and_pop_2 (__main__.TestStack) ... ok
+
+======================================================================
+FAIL: test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder_0 (__main__.TestStack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_stack.py", line 34, in test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder
+    self.assertEqual( 2, self._stack.pop() )
+AssertionError: 2 != 14
+
+======================================================================
+FAIL: test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder_1 (__main__.TestStack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_stack.py", line 34, in test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder
+    self.assertEqual( 2, self._stack.pop() )
+AssertionError: 2 != 0
+
+======================================================================
+FAIL: test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder_2 (__main__.TestStack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/parameterized/parameterized.py", line 392, in standalone_func
+    return func(*(a + p.args), **p.kwargs)
+  File "test_stack.py", line 34, in test__pop__ItemsInStack__ItemsInsertedAndPoppedInCorrectOrder
+    self.assertEqual( 2, self._stack.pop() )
+AssertionError: 2 != 0.04852845905874814
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.006s
+
+FAILED (failures=3)

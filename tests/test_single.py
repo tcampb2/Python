@@ -12,27 +12,22 @@ class SingleTestCase(unittest.TestCase):
 
     def setUp(self):
         self._list = Linked_List()
-    
-    @unittest.expectedFailure    
+       
     def test_empty(self):
         self.assertTrue(self._list.isEmpty())
-        
-    @unittest.expectedFailure    
+            
     def test_insert_head_and_remove_head_single_object(self):
     	self._list.insert_head("hello")
     	self.assertEqual(self._list.delete_head().data, "hello")
-    
-    @unittest.expectedFailure	
+    	
     def test_insert_tail_and_remove_tail_single_object(self):
     	self._list.insert_tail("hello")
     	self.assertEqual(self._list.delete_tail().data, "hello")
-    
-    @unittest.expectedFailure    
+        
     def test_insert_tail_and_remove_head_single_object(self):
     	self._list.insert_tail("hello")
     	self.assertEqual(self._list.delete_head().data, "hello")
     
-    @unittest.expectedFailure	
     def test_insert_head_and_remove_tail_single_object(self):
     	self._list.insert_head("hello")
     	self.assertEqual(self._list.delete_tail().data, "hello")
@@ -45,8 +40,7 @@ class SingleTestCase(unittest.TestCase):
     def test_insert_tail_one_object(self):
     	self._list.insert_head("hello")
     	pass
-    
-    @unittest.expectedFailure	
+    	
     def test_insert_tail_two_objects(self):
     	self._list.insert_tail("hello")
     	self._list.insert_tail("hello2")
@@ -57,7 +51,6 @@ class SingleTestCase(unittest.TestCase):
         ("test_string2", "1", "2", "3", "3 2 1"),
         ("test_string3", "top hat", "carrot", "snowman", "snowman carrot top hat")])
     @mock.patch.object(Linked_List, 'printList')  
-    @unittest.expectedFailure
     def test_display(self, _, input1, input2, input3, expected, mock_display):    	
     	def side_effect_list():
         	text = ""

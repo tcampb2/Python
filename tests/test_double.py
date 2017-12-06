@@ -15,28 +15,23 @@ class DoubleTestCase(unittest.TestCase):
     
     def test_empty(self):
         self.assertTrue(self._list.isEmpty())
-    
-    @unittest.expectedFailure    
+        
     def test_insert_head_and_remove_head_single_object(self):
     	self._list.insertHead("hello")
     	self.assertEqual(self._list.deleteHead().value, "hello")
-    
-    @unittest.expectedFailure	
+    	
     def test_insert_tail_and_remove_tail_single_object(self):
     	self._list.insertTail("hello")
     	self.assertEqual(self._list.deleteTail().value, "hello")
     
-    @unittest.expectedFailure    
     def test_insert_tail_and_remove_head_single_object(self):
     	self._list.insertTail("hello")
     	self.assertEqual(self._list.deleteHead().value, "hello")
-    
-    @unittest.expectedFailure	
+
     def test_insert_head_and_remove_tail_single_object(self):
     	self._list.insertHead("hello")
     	self.assertEqual(self._list.deleteTail().value, "hello")
     
-    @unittest.expectedFailure
     def test_insert_tail_two_objects(self):
     	self._list.insertTail("hello")
     	self._list.insertTail("hello2")
@@ -52,19 +47,16 @@ class DoubleTestCase(unittest.TestCase):
     	self._list.insertTail("hello2")
     	pass
     	
-    @unittest.expectedFailure
     def test_insert_tail_then_insert_head(self):
     	self._list.insertTail("hello")
     	self._list.insertHead("hello2")
     	pass
     
-    @unittest.expectedFailure
     def test_insert_tail_and_remove_tail_two_objects(self):
     	self._list.insertTail("hello")
     	self._list.insertTail("hello2")
     	self.assertEqual(self._list.deleteTail().value, "hello2")
     
-    @unittest.expectedFailure
     def test_insert_tail_and_remove_head_two_objects(self):
     	self._list.insertTail("hello")
     	self._list.insertTail("hello2")

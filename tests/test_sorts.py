@@ -14,9 +14,9 @@ sys.path.append(os.path.abspath('..'))
 class TestSorts(unittest.TestCase):
 	
 	@parameterized.expand([
-		# ("bogosort", ), # hangs
+		("bogosort", ), # hangs
 		("bubble_sort", ),
-		# ("bucket_sort", "bucket_sort"), # requires non-present dependencies 
+		("bucket_sort", "bucket_sort"), # requires non-present dependencies 
 		("cocktail_shaker_sort", ),
 		("counting_sort", ),
 		("cyclesort", "cycle_sort"),
@@ -30,7 +30,7 @@ class TestSorts(unittest.TestCase):
 		("shell_sort", ),
 		("timsort", ),
 	])
-	# @timeout_decorator.timeout(5) # does not work on windows
+	@timeout_decorator.timeout(5) # does not work on windows
 	def test__mostSorts__workForIntLists(self, sort_file_name, sort_name=""):
 		if not sort_name:
 			sort_name = sort_file_name

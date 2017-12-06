@@ -10,17 +10,17 @@ import random
 sys.path.append(os.path.abspath('../machine_learning'))
 import k_means_clust
 
-class KMeansTestCase(unittest.TestCase):
-
-	test_data = [
+test_data = [
 		[[-5, -4, -7, -2, -7], [5, -10, 8, 8, -3], [0, -4, 6, -2, 6], [-1, -1, 5, 9, 5], [-6, 3, -10, -5, -5]],
 		[[9, -9, -7, 3, -9], [-5, -2, 0, -6, -10], [4, 1, 2, -10, 8], [-8, 8, 2, -5, -3], [7, -1, -6, 6, -8]],
 		[[0, 7, -5, 4, 3], [2, 1, -8, 8, 4], [7, -6, -1, -7, 5], [2, -7, -10, -3, -1], [-1, -3, -3, -6, 9]],
 		[[-2, 7, -9, 8, -5], [-8, -5, 9, 1, 6], [-8, -3, -8, 0, 4], [-4, -6, -6, 6, 1], [-5, 2, -2, -9, 9]],
 		[[2, -4, 2, -1, 7], [-6, -6, -10, 3, -5], [-7, 4, 9, -6, -5], [-9, 3, -3, -6, -10], [-1, -5, -5, -4, -3]]
 	]
+
+test_k = [4, 9, 2, 8, 3]
 	
-	test_centroids = [
+test_centroids = [
 		[[-1, -1, 5, 9, 5], [-6, 3, -10, -5, -5], [-5, -4, -7, -2, -7], [5, -10, 8, 8, -3]],
 		[[-8, 8, 2, -5, -3], [7, -1, -6, 6, -8], [9, -9, -7, 3, -9], [-5, -2, 0, -6, -10],
 		 [-8, 8, 2, -5, -3], [9, -9, -7, 3, -9], [9, -9, -7, 3, -9], [-5, -2, 0, -6, -10], 
@@ -31,7 +31,7 @@ class KMeansTestCase(unittest.TestCase):
 		[[-9, 3, -3, -6, -10], [-1, -5, -5, -4, -3], [2, -4, 2, -1, 7]]
 	]
 	
-	test_distances = [
+test_distances = [
 		[[20.83266666, 8.48528137, 0, 21.84032967], [13.82027496, 28.05352028, 21.84032967, 0],
        	 [11.53256259, 21.70253441, 19.05255888, 15.68438714], [0, 23.70653918, 20.83266666, 13.82027496],
        	 [23.70653918, 0, 8.48528137, 28.05352028]],
@@ -51,17 +51,17 @@ class KMeansTestCase(unittest.TestCase):
          [0, 13.60147051, 22.56102835], [13.60147051, 0, 12.9614814]]
     ]
    
-	test_assignments = [
+test_assignments = [
 		[2, 3, 0, 0, 1], [2, 3, 0, 0, 1], [1, 0, 1, 0, 1], [2, 3, 0, 0, 1], [2, 1, 0, 0, 1]
     ]
-   		
 
+class KMeansTestCase(unittest.TestCase):
 	@parameterized.expand([
-		("test_1", test_data[0], 4, test_centroids[0]),
-		("test_2", test_data[1], 9, test_centroids[1]),
-		("test_3", test_data[2], 2, test_centroids[2]),
-		("test_4", test_data[3], 8, test_centroids[3]),
-		("test_5", test_data[4], 3, test_centroids[4])])
+		("test_1", test_data[0], test_k[0], test_centroids[0]),
+		("test_2", test_data[1], test_k[1], test_centroids[1]),
+		("test_3", test_data[2], test_k[2], test_centroids[2]),
+		("test_4", test_data[3], test_k[3], test_centroids[3]),
+		("test_5", test_data[4], test_k[4], test_centroids[4])])
 	def test_get_initial_centroids(self, _, data, k, expected):
 		array = np.array(data)
 		np.testing.assert_equal(k_means_clust.get_initial_centroids(array, k, seed=1).tolist(), expected)
@@ -87,7 +87,6 @@ class KMeansTestCase(unittest.TestCase):
 		test_data = np.array(data)
 		centroids = np.array(data2)
 		np.testing.assert_equal(k_means_clust.assign_clusters(test_data, centroids), expected)
-	
 
 if __name__ == "__main__":   
 	unittest.main()
